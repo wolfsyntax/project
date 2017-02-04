@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Retailer Accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Account name</th>
+      <th>Account balance</th>
+      <th>Reload Account</th>
+      <th>Transaction Summary</th>
+      <th>Account Info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.username %></td>
+        <td><%= account.account_name %></td>
+        <td><%= account.account_balance %></td>
+        <td> 
+          <table>
+            <tr> 
+              <td>Amount:</td>
+              <td><%= text_field :account, :account_balance %></td>
+            </tr> 
+              <tr><td>PIN:</td>
+              <td><%= text_field :account, :salt %></td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td><%= link_to 'Reload', account %>
+            </tr>
+          </table>
+        </td>
+        <td> summary</td>
+        <td><%= link_to 'View Details', account %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create Account', new_account_path %>
+<%= link_to 'Back', 'index' %>

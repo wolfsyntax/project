@@ -5,8 +5,9 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = User.find(params[:id])
+		@user = User.all
 	end
+
 
 	def create
 		
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
 	end
 
 	def rlist
-
+		@user = User.all
 	end
 
 	def admin
