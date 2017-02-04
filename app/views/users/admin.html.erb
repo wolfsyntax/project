@@ -1,0 +1,46 @@
+<ul>
+	<li></li>
+	<li><%= %></li>
+	<li><%= @greet %></li>
+</ul>
+<div class = "content">
+	<h1>Create Account</h1>
+	<table>
+		<%= form_for :user do |f| %>
+		<tr>
+			<td>Username: </td>
+			<td><%= text_field :user, :username%>
+		</tr>
+		
+		<tr>
+			<td>Password</td>
+			<td><%= text_field :user, :password %></td>
+		</tr>
+		
+		<tr>
+			<td>Confirm Password</td>
+			<td><%= text_field :user, :password %></td>
+		</tr>
+
+		<tr>
+			<td>Security PIN</td>
+			<td><%= text_field :user, :salt %></td>
+		</tr>
+		<tr>
+			<td>Recovery Password: </td>
+			<td><%= text_field :user, :recovery_pass %></td>
+		</tr>						
+		<tr>
+			<td>Account Type: </td>
+			<td><%= radio_button :user, :account_type, "Admin" %>Admin
+			<%= radio_button :user, :account_type, "Employee" %>Employee</td>
+		</tr>						
+		<tr>
+			<td></td>
+			<td><%= submit_tag 'Create Account' %></td>
+		</tr>
+		<% end %>
+		
+	</table>
+	<%= link_to 'Back', 'index' %>
+</div>

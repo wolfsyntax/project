@@ -1,0 +1,25 @@
+<h1>Retailer Accounts</h1>
+<p>Welcome to Ruby on Rails!</p>
+<div>
+	<table>
+		<tr>
+			<th>Username</th>
+			<th>Account Name</th>
+			<th>Balance</th>
+			<th>Reload Account</th>
+			<th>Transaction Summary</th>
+			<th>Account Information</th>
+			<th> </th>
+		</tr>
+		<%= @user.each do |u| %>
+		<tr>
+			<td><%= u.username %></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><%= link_to 'Account Info', 'show/1'%></td>
+			<td></td>
+		</tr>
+	</table>
+</div>
