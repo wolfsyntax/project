@@ -1,31 +1,52 @@
-<table>
-	<tr>
-		<td>
-			<table>
-				<tr>
-					<td>Username: </td>
-					<td><%= text_field :user, :username %></td>
-				</tr>
-				<tr>
-				<tr>
-					<td>Password: </td>
-					<td><%= password_field :user, :password%></td>
-				</tr>
-		    	<tr>
-		    		<td></td>
-		    		<td><%= link_to 'Log In', 'admin'%></td>
-		    	</tr>
-			</table>
-		</td>
-		<td>
-			<table>
-				<tr>
-					<td>
-						<h4>Create a new free account</h4>
-						<p>Looking for extra income?</p>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
+
+<div>
+	<table>
+		<tr>
+			<td>Updates Bulletin</td>
+			<td>
+				<marquee >Looking for extra income?</marquee>
+			</td>
+		</tr>
+	</table>
+
+	<table>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>Username: </td>
+						<td><%= text_field :user, :username %></td>
+					</tr>
+					<tr>
+					<tr>
+						<td>Password: </td>
+						<td><%= password_field :user, :password%></td>
+					</tr>
+			    	<tr>
+			    		<td></td>
+			    		<td><%= link_to 'Log In', 'main.ui'%></td>
+			    	</tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td>
+							<h4>Create a new free account</h4>
+							<p>Looking for extra income?</p>
+							<p>Do you want to have a lifetime discount?</p>
+
+							<p>Be one of us, Sell popular prepaid products (e-load, prepaid call cards, prepaid internet cards, online gaming cards, etc.) via mobile browsers or PCs with internet connection.</p>
+
+							<p>ONE LOADWALLET THAT CAN BE USED TO SELL MORE THAN 300 PREPAID PRODUCTS</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+<footer>
+	<p>UR|Biz &copy; 2017.</p>
+	<p>Powered by <%= link_to 'Loadcentral', 'http://loadcentral.com.ph/' %></p>
+</footer>

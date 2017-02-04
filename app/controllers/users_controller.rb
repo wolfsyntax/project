@@ -28,5 +28,7 @@ class UsersController < ApplicationController
 	def admin
 		@greet = 'Welcome, Admin!'
 	end
-
+	def main
+		
+	end
 end

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   post 'admin'					=> 'users#create'
   
   get 'retailer.do'				=> 'accounts#index'
-  
+  get 'main.ui'					=> 'users#main'
   #rails generate controller users
   #creates a file users_controller
   # and a directory inside the view
